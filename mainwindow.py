@@ -69,10 +69,10 @@ def clear_tree_view(mytree):
         mytree.delete(item)
 
 def display():
-    clear_tree_view(table)  # Assuming this function exists to clear the table
+    clear_tree_view(table) 
 
     if len(array) == 0:
-        read_data()  # Assuming this function populates the array
+        read_data()  
 
     for item in array:
         table.insert("", END, values=(item['name'], item['employee_id'], item['gender'], item['age'], item['contact']))
@@ -262,7 +262,7 @@ def update_employee():
 def exit_employee():
     main.destroy()
 
-#creat Button
+#create Button
 addButton = ttk.Button(leftFrame, text='Add Employee', width=25, command=add_employee).grid(row=1, column=0, pady=20)
 delButton = ttk.Button(leftFrame, text='Delete Employee', width=25, command=delete_employee).grid(row=2, column=0,pady=20)
 updateButton = ttk.Button(leftFrame, text='Update', width=25, command=update_employee).grid(row=3, column=0, pady=20)
